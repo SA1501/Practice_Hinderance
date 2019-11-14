@@ -14,7 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        let URL = NSURL(fileURLWithPath: ("showHome://" as String?)!)
+        UIApplication.shared.open(URL as URL) { (Bool) in
+            print("yes")
+        }
+    }
 
 }
 
